@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple Style</title>
+
+	<link rel="stylesheet" href="./css/main.css">
+
+	<style>
+		#links a {
+			display: inline-block;
+		}
+
+		#inputs > div {
+			margin-block-end: 1em;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: .25em;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Nav Bar</h1>
+		<nav>
+			<a href="#!" class="active">Active</a>
+			<a href="#buttons">Buttons</a>
+			<a href="#links">Links</a>
+			<a href="#inputs">Inputs</a>
+		</nav>
+	</header>
+	<div id="buttons">
+		<h1>Buttons</h1>
+		<button type="button">Normal</button>
+		<button type="button" class="s">Secondary</button>
+		<button type="button" disabled>Disabled</button>
+		<button type="button" class="b">Big</button>
+		<button type="reset">Reset</button>
+		<button type="reset" class="b">Big Reset</button>
+		<button type="reset" disabled>Reset Disabled</button>
+	</div>
+
+	<div id="links">
+		<h1>Links</h1>
+		<a href="#!">Normal</a>
+		<a href="#!" target="_blank">New Tab</a>
+		<a href="#!" role="button">Button</a>
+		<a href="mailto:someone" role="button" disabled>Button</a>
+		<a href="#!" role="button" target="_blank">New Tab Link-Button</a>
+		<a href="mailto:someone">Mail</a>
+		<a href="tel:number">Phone</a>
+		<a href="sms:number">SMS</a>
+	</div>
+
+	<div id="inputs">
+		<h1>Inputs</h1>
+		<div>
+			<input type="text" placeholder="Text">
+			<input type="email" placeholder="E-Mail">
+			<input type="number" placeholder="Number" step=".1">
+			<input class="s" type="text" placeholder="Small">
+			<input class="b" type="text" placeholder="Big">
+			<input type="search" placeholder="Search">
+			<textarea rows="3" placeholder="Textarea"></textarea>
+		</div>
+		<div>
+			<input type="text" placeholder="Disabled" disabled>
+		</div>
+		<div>
+			<label>Label</label>
+		</div>
+	</div>
+</body>
+</html>

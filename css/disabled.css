@@ -1,0 +1,29 @@
+/* Disabled */
+:where(
+	button,
+	a[role="button"],
+	input[type="button"],
+	input[type="submit"],
+	input[type="reset"]
+)[disabled] {
+	cursor: not-allowed;
+	background-color: rgba(var(--accent-rgb), 0.6);
+}
+
+/* Reset */
+:where([type="reset"]) {
+	background-color: var(--red);
+}
+
+/* Reset disabled */
+:where([type="reset"])[disabled] {
+	background-color: rgba(var(--red-rgb), 0.6);
+}
+
+:where([type="reset"]):where(:hover) {
+	background-color: rgba(var(--red-rgb), 0.9);
+}
+
+:where([type="reset"]):where(:active) {
+	background-color: rgba(var(--red-rgb), 0.8);
+}

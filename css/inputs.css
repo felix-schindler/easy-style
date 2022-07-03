@@ -1,0 +1,37 @@
+input, textarea {
+	font: var(--sans);
+	border: 1px solid var(--accent);
+	border-radius: var(--radius);
+	padding: .25em .5em;
+	font-size: 1.125em;
+}
+
+/* Big */
+input.b, textarea.s {
+	font-size: 1.25em;
+}
+
+/* Small */
+input.s, textarea.s {
+	font-size: 1em;
+}
+
+input[type="number"] {
+	font-family: var(--mono);
+}
+
+input[type="search"] {
+	border-radius: 500em;
+}
+
+input[disabled] {
+	cursor: not-allowed;
+	background-color: rgba(var(--gray-rgb), 0.2);
+}
+
+
+/* Labels */
+label {
+	color: var(--gray);
+	text-transform: uppercase;
+}

@@ -1,0 +1,34 @@
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* Special */
+a[target="_blank"]::after {
+	content: " ↗️"
+}
+
+a[href^=mailto\:]:before {
+	content: "📧 ";
+}
+
+a[href^=tel\:]:before {
+	content: "📞 ";
+}
+
+a[href^=sms\:]:before {
+	content: "💬 ";
+}
+
+/* The color get's overwritten from the statement above */
+a[role="button"] {
+	color: var(--on-accent);
+}
+
+a[role="button"][disabled]:hover {
+	text-decoration: none;
+}
