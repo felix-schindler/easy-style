@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Simple Style</title>
 
-	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./src/main.css">
 
 	<style>
 		#links a {
@@ -19,130 +19,215 @@
 			align-items: center;
 			gap: .25em;
 		}
+
+		#settings > div {
+			display: flex;
+			align-items: center;
+			gap: 1em;
+		}
+
+		main {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+			gap: 1em;
+		}
+
+		main > div {
+			padding: 1em;
+			background-color: rgba(var(--gray-rgb), .2);
+			border-radius: var(--radius);
+		}
 	</style>
 </head>
 <body>
-	<header>
-		<h1>Nav Bar</h1>
-		<p>Use <code>a.active</code> to mark link as active</p>
-		<nav>
-			<a href="#!" class="active">Active</a>
-			<a href="#buttons">Buttons</a>
-			<a href="#links">Links</a>
-			<a href="#inputs">Inputs</a>
-		</nav>
-	</header>
-	<div id="buttons">
-		<h1>Buttons</h1>
-		<p>Use <code>button.b</code> for big; <code>button.s</code> for secondary variant</p>
-		<button type="button">Normal</button>
-		<button type="button" disabled>Disabled</button>
-		<button type="button" class="b">Big Button</button>
-		<button type="button" class="b" disabled>Big Disabled</button>
-		<button type="button" class="s">Secondary</button>
-		<button type="button" class="s" disabled>Secondary Disabled</button>
-		<button type="reset">Reset</button>
-		<button type="reset" class="b">Big Reset</button>
-		<button type="reset" disabled>Reset Disabled</button>
+	<h1><mark>Easy</mark> (to use) style</h1>
 
-		<h2>Inputs</h2>
-		<input type="button" value="Button">
-		<input type="submit">
-		<input type="reset">
-	</div>
+	<ol>
+		<li>Easy themable</li>
+		<li>Easy to use</li>
+		<li>Easy to replace</li>
+		<li>Auto dark mode</li>
+		<li>Responsive</li>
+		<li><i>Almost</i> no classes</li>
+		<li>Size: 4KB (without compression)</li>
+	</ol>
 
-	<div id="links">
-		<h1>Links</h1>
-		<p>Use <code>role="button"</code> to make it look like one</p>
-		<a href="#!">Normal</a>
-		<a href="#!" target="_blank">New Tab</a>
-		<a href="#!" role="button">Button</a>
-		<a href="mailto:someone" role="button" disabled>Button</a>
-		<a href="#!" role="button" target="_blank">New Tab Link-Button</a>
-		<a href="mailto:someone">Mail</a>
-		<a href="tel:number">Phone</a>
-		<a href="sms:number">SMS</a>
-	</div>
-
-	<div id="inputs">
-		<h1>Inputs</h1>
-		<p>Use <code>button.b</code> for big; <code>button.s</code> for small variant</p>
-		<div>
-			<input type="text" placeholder="Text">
-			<input type="email" placeholder="E-Mail">
-			<input type="number" placeholder="Number" step=".1">
-			<input type="search" placeholder="Search">
-			<input class="s" type="text" placeholder="Small">
-			<input class="b" type="text" placeholder="Big">
-			<textarea rows="3" placeholder="Textarea"></textarea>
+	<main>
+		<div id="settings">
+			<h2>Settings</h2>
+			<p>Make a new Theme yourself in seconds.</p>
+			<div>
+				<label for="accent">Accent color</label>
+				<input type="color" id="accent" value="#1e90ff">
+				<label for="accent">Color on accent color</label>
+				<input type="color" id="onaccent" value="#FFFFFF">
+			</div>
+			<div>
+				<label for="radius">Radius (in px)</label>
+				<input type="range" min="0" value="8" max="255" id="radius">
+			</div>
 		</div>
-		<h2>Disabled</h2>
-		<div>
-			<input type="text" placeholder="Disabled" disabled>
-			<textarea rows="3" placeholder="Textarea" disabled></textarea>
-		</div>
-		<h2>Labels</h2>
-		<div>
-			<label>Label</label>
-		</div>
-	</div>
 
-	<div id="tables">
-		<h1>Tables</h1>
-		<table>
-			<thead>
-				<tr>
-					<th>#</th>
-					<th>Name</th>
-					<th>Birth date</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>1</td>
-					<td>Adam Sandler</td>
-					<td>9. September 1966</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td>Chris Evans</td>
-					<td>13. Juni 1981</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td>Robert Downey Jr.</td>
-					<td>4. April 1965</td>
-				</tr>
-			</tbody>
-		</table>
+		<div>
+			<h1>Nav Bar</h1>
+			<p>Use <code>a.active</code> to mark link as active</p>
+			<nav>
+				<a href="#!" class="active">Active</a>
+				<a href="#buttons">Buttons</a>
+				<a href="#links">Links</a>
+				<a href="#inputs">Inputs</a>
+			</nav>
+		</div>
 
-		<p>Use <code>table.w</code> for full width</p>
-		<table class="w">
-			<thead>
-				<tr>
-					<th>#</th>
-					<th>Name</th>
-					<th>Birth date</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>1</td>
-					<td>Adam Sandler</td>
-					<td>9. September 1966</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td>Chris Evans</td>
-					<td>13. Juni 1981</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td>Robert Downey Jr.</td>
-					<td>4. April 1965</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+		<div id="links">
+			<h1>Links</h1>
+			<p>Use <code>role="button"</code> to make it look like one</p>
+			<a href="#!">Normal</a>
+			<a href="#!" target="_blank">New Tab</a>
+			<a href="#!" role="button">Button</a>
+			<a href="mailto:someone" role="button" disabled>Button</a>
+			<a href="#!" role="button" target="_blank">New Tab Link-Button</a>
+			<a href="mailto:someone">Mail</a>
+			<a href="tel:number">Phone</a>
+			<a href="sms:number">SMS</a>
+		</div>
+
+		<div id="buttons">
+			<h1>Buttons</h1>
+			<p>Use <code>button.b</code> for big; <code>button.s</code> for secondary variant</p>
+			<button type="button">Normal</button>
+			<button type="button" disabled>Disabled</button>
+			<button type="button" class="b">Big Button</button>
+			<button type="button" class="b" disabled>Big Disabled</button>
+			<button type="button" class="s">Secondary</button>
+			<button type="button" class="s" disabled>Secondary Disabled</button>
+			<button type="reset">Reset</button>
+			<button type="reset" class="b">Big Reset</button>
+			<button type="reset" disabled>Reset Disabled</button>
+
+			<h2>Inputs</h2>
+			<input type="button" value="Button">
+			<input type="submit">
+			<input type="reset">
+		</div>
+
+		<div id="inputs">
+			<h1>Inputs</h1>
+			<p>Use <code>button.b</code> for big; <code>button.s</code> for small variant</p>
+			<div>
+				<input type="text" placeholder="Text">
+				<input type="email" placeholder="E-Mail">
+				<input type="number" placeholder="Number" step=".1">
+				<input type="search" placeholder="Search">
+				<input class="s" type="text" placeholder="Small">
+				<input class="b" type="text" placeholder="Big">
+				<textarea rows="3" placeholder="Textarea"></textarea>
+			</div>
+
+			<h2>Checkboxes</h2>
+			<div>
+				<input type="checkbox" id="rm">
+				<label for="rm">Remember Me</label>
+			</div>
+
+			<h2>Radios</h2>
+			<div>
+				<input type="radio" name="car" id="merc">
+				<label for="merc">Mercedes-Benz</label>
+				<input type="radio" name="car" id="bmw">
+				<label for="bmw">BMW</label>
+			</div>
+
+			<h2>Disabled</h2>
+			<div>
+				<input type="text" placeholder="Disabled" disabled>
+				<textarea rows="3" placeholder="Textarea" disabled></textarea>
+			</div>
+
+			<h2>Labels</h2>
+			<div>
+				<label>Label</label>
+			</div>
+		</div>
+
+		<div id="tables">
+			<h1>Tables</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Name</th>
+						<th>Birth date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Adam Sandler</td>
+						<td>9. September 1966</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Chris Evans</td>
+						<td>13. Juni 1981</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Robert Downey Jr.</td>
+						<td>4. April 1965</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>Use <code>table.w</code> for full width</p>
+			<table class="w">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Name</th>
+						<th>Birth date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Adam Sandler</td>
+						<td>9. September 1966</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Chris Evans</td>
+						<td>13. Juni 1981</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Robert Downey Jr.</td>
+						<td>4. April 1965</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</main>
+
+	<script>
+		function parseHex(hex) {
+			hex = hex.slice(1);
+			const hexArr = hex.match(/.{1,2}/g);
+
+			return [
+					parseInt(hexArr[0], 16),
+					parseInt(hexArr[1], 16),
+					parseInt(hexArr[2], 16)
+			].join(", ");
+		}
+
+		const accent = document.getElementById("accent");
+		const onAccent = document.getElementById("onaccent");
+		const radius = document.getElementById("radius");
+
+		accent.addEventListener("input", (e) => document.documentElement.style.setProperty('--accent-rgb', parseHex(e.target.value)));
+		onAccent.addEventListener("input", (e) => document.documentElement.style.setProperty('--on-accent', e.target.value));
+		radius.addEventListener("input", (e) => document.documentElement.style.setProperty('--radius', `${e.target.value}px`));
+	</script>
 </body>
 </html>

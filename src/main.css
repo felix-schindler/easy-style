@@ -1,3 +1,8 @@
+/*!
+Easy Style CSS Framework v0.1.0
+URL: https://github.com/felix-schindler/easy-style
+*/
+
 @import url("links.css");
 @import url("nav.css");
 @import url("buttons.css");
@@ -11,12 +16,12 @@ html {
 	color-scheme: light dark;
 
 	/* Accent */
-	--red-rgb: 232, 42, 42;
+	--accent-rgb: 30, 144, 255;
 	--accent: rgb(var(--accent-rgb));
 	--on-accent: white;
 
 	/* Red */
-	--accent-rgb: 30, 144, 255;
+	--red-rgb: 232, 42, 42;
 	--red: rgb(var(--red-rgb));
 
 	/* Gray */
@@ -36,6 +41,16 @@ code {
 	border-radius: var(--radius);
 	font-size: 14px;
 	padding: .25em;
+}
+
+mark {
+	color: var(--on-accent);
+	background-color: var(--accent);
+}
+
+img, video {
+	max-width: 100%;
+	height: auto;
 }
 
 ::selection {

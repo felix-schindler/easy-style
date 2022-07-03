@@ -1,0 +1,14 @@
+{
+  "name": "easy-style",
+  "version": "0.1.0",
+  "description": "Easy to use style",
+  "repository": "https://github.com/felix-schindler/easy-style",
+  "author": "Felix <webmaster@schindlerfelix.de>",
+  "license": "MIT",
+  "scripts": {
+    "build": "cleancss -o easy-style.min.css src/main.css"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^4.2.1"
+  }
+}

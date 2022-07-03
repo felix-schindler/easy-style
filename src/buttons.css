@@ -82,6 +82,7 @@
 ).s {
 	color: var(--accent);
 	background-color: rgba(var(--gray-rgb), .25);
+	padding: .3em .5em;
 	border-radius: 500px;
 }
 
