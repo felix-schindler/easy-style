@@ -1,14 +1,15 @@
-input, textarea {
+/* Inputs */
+input:not(:where([type="button"], [type="submit"], [type="reset"])), textarea {
 	font: var(--sans);
-	border: 1px solid var(--accent);
+	border: 1px solid var(--gray);
 	border-radius: var(--radius);
 	padding: .25em .5em;
 	font-size: 1.125em;
 }
 
-/* Big */
-input.b, textarea.s {
-	font-size: 1.25em;
+/* Focus */
+input:focus, textarea:focus {
+	border-color: var(--accent);
 }
 
 /* Small */
@@ -16,17 +17,18 @@ input.s, textarea.s {
 	font-size: 1em;
 }
 
+/* Big */
+input.b, textarea.s {
+	font-size: 1.25em;
+}
+
+/* Special */
 input[type="number"] {
 	font-family: var(--mono);
 }
 
 input[type="search"] {
-	border-radius: 500em;
-}
-
-input[disabled] {
-	cursor: not-allowed;
-	background-color: rgba(var(--gray-rgb), 0.2);
+	border-radius: 500px;
 }
 
 

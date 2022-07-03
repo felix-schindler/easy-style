@@ -20,19 +20,6 @@
 	transition: var(--trans);
 }
 
-/* FIXME: Big */
-:where(
-	button,
-	a[role="button"],
-	input[type="button"],
-	input[type="submit"],
-	input[type="reset"],
-	input[type="file"]
-).b,
-:where(input[type="file"])::file-selector-button.b {
-	padding: .75em 1em;
-}
-
 /* Hover */
 :where(
 	button,
@@ -53,4 +40,71 @@
 	input[type="reset"]
 ):where(:active) {
 	background-color: rgba(var(--accent-rgb), 0.8);
+}
+
+
+
+/* Big */
+:where(
+	button,
+	a[role="button"],
+	input[type="button"],
+	input[type="submit"],
+	input[type="reset"],
+	input[type="file"]
+).b {
+	padding: .75em 1em;
+}
+
+
+/* Reset */
+:where([type="reset"]) {
+	background-color: var(--red);
+}
+
+:where([type="reset"]):where(:hover) {
+	background-color: rgba(var(--red-rgb), 0.9);
+}
+
+:where([type="reset"]):where(:active) {
+	background-color: rgba(var(--red-rgb), 0.8);
+}
+
+
+/* Secondary */
+:where(
+	button,
+	a[role="button"],
+	input[type="button"],
+	input[type="submit"],
+	input[type="reset"],
+	input[type="file"]
+).s {
+	color: var(--accent);
+	background-color: rgba(var(--gray-rgb), .25);
+	border-radius: 500px;
+}
+
+/* Hover */
+:where(
+	button,
+	a[role="button"],
+	input[type="button"],
+	input[type="submit"],
+	input[type="reset"],
+	input[type="file"]
+).s:where(:not(:active):hover) {
+	background-color: rgba(var(--gray-rgb), .2);
+}
+
+/* Pressing */
+:where(
+	button,
+	a[role="button"],
+	input[type="button"],
+	input[type="submit"],
+	input[type="reset"],
+	input[type="file"]
+).s:where(:active) {
+	background-color: rgba(var(--gray-rgb), .15);
 }

@@ -1,0 +1,23 @@
+table.w {
+	width: 100%;
+}
+
+table th {
+	text-align: start;
+}
+
+table th, table td {
+	padding: .5em;
+}
+
+table thead {
+	border-bottom: 1px solid rgba(var(--gray-rgb), .2);
+}
+
+table tbody > tr:nth-child(2n) {
+	background-color: rgba(var(--gray-rgb), .2);
+}
+
+table tbody > tr:hover {
+	background-color: rgba(var(--gray-rgb), .3);
+}

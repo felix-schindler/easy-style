@@ -24,6 +24,7 @@
 <body>
 	<header>
 		<h1>Nav Bar</h1>
+		<p>Use <code>a.active</code> to mark link as active</p>
 		<nav>
 			<a href="#!" class="active">Active</a>
 			<a href="#buttons">Buttons</a>
@@ -33,17 +34,26 @@
 	</header>
 	<div id="buttons">
 		<h1>Buttons</h1>
+		<p>Use <code>button.b</code> for big; <code>button.s</code> for secondary variant</p>
 		<button type="button">Normal</button>
-		<button type="button" class="s">Secondary</button>
 		<button type="button" disabled>Disabled</button>
-		<button type="button" class="b">Big</button>
+		<button type="button" class="b">Big Button</button>
+		<button type="button" class="b" disabled>Big Disabled</button>
+		<button type="button" class="s">Secondary</button>
+		<button type="button" class="s" disabled>Secondary Disabled</button>
 		<button type="reset">Reset</button>
 		<button type="reset" class="b">Big Reset</button>
 		<button type="reset" disabled>Reset Disabled</button>
+
+		<h2>Inputs</h2>
+		<input type="button" value="Button">
+		<input type="submit">
+		<input type="reset">
 	</div>
 
 	<div id="links">
 		<h1>Links</h1>
+		<p>Use <code>role="button"</code> to make it look like one</p>
 		<a href="#!">Normal</a>
 		<a href="#!" target="_blank">New Tab</a>
 		<a href="#!" role="button">Button</a>
@@ -56,21 +66,83 @@
 
 	<div id="inputs">
 		<h1>Inputs</h1>
+		<p>Use <code>button.b</code> for big; <code>button.s</code> for small variant</p>
 		<div>
 			<input type="text" placeholder="Text">
 			<input type="email" placeholder="E-Mail">
 			<input type="number" placeholder="Number" step=".1">
+			<input type="search" placeholder="Search">
 			<input class="s" type="text" placeholder="Small">
 			<input class="b" type="text" placeholder="Big">
-			<input type="search" placeholder="Search">
 			<textarea rows="3" placeholder="Textarea"></textarea>
 		</div>
+		<h2>Disabled</h2>
 		<div>
 			<input type="text" placeholder="Disabled" disabled>
+			<textarea rows="3" placeholder="Textarea" disabled></textarea>
 		</div>
+		<h2>Labels</h2>
 		<div>
 			<label>Label</label>
 		</div>
+	</div>
+
+	<div id="tables">
+		<h1>Tables</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>Birth date</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Adam Sandler</td>
+					<td>9. September 1966</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Chris Evans</td>
+					<td>13. Juni 1981</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Robert Downey Jr.</td>
+					<td>4. April 1965</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>Use <code>table.w</code> for full width</p>
+		<table class="w">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>Birth date</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Adam Sandler</td>
+					<td>9. September 1966</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Chris Evans</td>
+					<td>13. Juni 1981</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Robert Downey Jr.</td>
+					<td>4. April 1965</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </body>
 </html>

@@ -1,4 +1,10 @@
-/* Disabled */
+/* Global */
+[disabled], :disabled {
+	cursor: not-allowed;
+}
+
+
+/* Buttons */
 :where(
 	button,
 	a[role="button"],
@@ -6,13 +12,19 @@
 	input[type="submit"],
 	input[type="reset"]
 )[disabled] {
-	cursor: not-allowed;
 	background-color: rgba(var(--accent-rgb), 0.6);
 }
 
-/* Reset */
-:where([type="reset"]) {
-	background-color: var(--red);
+/* Secondary */
+:where(
+	button,
+	a[role="button"],
+	input[type="button"],
+	input[type="submit"],
+	input[type="reset"]
+).s[disabled] {
+	opacity: .75;
+	background-color: rgba(var(--gray-rgb), .2);
 }
 
 /* Reset disabled */
@@ -20,10 +32,8 @@
 	background-color: rgba(var(--red-rgb), 0.6);
 }
 
-:where([type="reset"]):where(:hover) {
-	background-color: rgba(var(--red-rgb), 0.9);
-}
 
-:where([type="reset"]):where(:active) {
-	background-color: rgba(var(--red-rgb), 0.8);
+/* Inputs */
+input[disabled], textarea[disabled] {
+	background-color: rgba(var(--gray-rgb), 0.2);
 }

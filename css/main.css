@@ -3,6 +3,7 @@
 @import url("buttons.css");
 @import url("inputs.css");
 @import url("disabled.css");
+@import url("table.css");
 
 /* Misc */
 html {
@@ -29,6 +30,19 @@ html {
 	--trans: background-color 200ms;
 }
 
-:focus-visible {
-	outline: 3px dotted var(--accent);
+code {
+	color: var(--red);
+	background-color: rgb(var(--gray-rgb), .3);
+	border-radius: var(--radius);
+	font-size: 14px;
+	padding: .25em;
 }
+
+::selection {
+	color: var(--on-accent);
+	background-color: var(--accent);
+}
+
+/* :focus-visible {
+	outline: 2px solid var(--accent);
+} */

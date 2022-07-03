@@ -29,6 +29,10 @@ a[role="button"] {
 	color: var(--on-accent);
 }
 
+a[role="button"][disabled] {
+	pointer-events: none;
+}
+
 a[role="button"][disabled]:hover {
 	text-decoration: none;
 }
