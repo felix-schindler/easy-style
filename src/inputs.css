@@ -28,7 +28,7 @@ input[type="number"] {
 }
 
 input[type="search"] {
-	border-radius: 500px;
+	border-radius: calc(var(--radius) * 10);
 }
 
 input[type="radio"], input[type="checkbox"] {
@@ -39,6 +39,10 @@ input[type="radio"], input[type="checkbox"] {
 
 /* Labels */
 label {
+	cursor: pointer;
+}
+
+label, .label {
 	color: var(--gray);
 	text-transform: uppercase;
 	letter-spacing: 1px;

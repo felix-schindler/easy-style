@@ -3,12 +3,13 @@ Easy Style CSS Framework v0.1.0
 URL: https://github.com/felix-schindler/easy-style
 */
 
-@import url("links.css");
-@import url("nav.css");
-@import url("buttons.css");
-@import url("inputs.css");
-@import url("disabled.css");
-@import url("table.css");
+@import "layout.css";
+@import "links.css";
+@import "nav.css";
+@import "buttons.css";
+@import "inputs.css";
+@import "disabled.css";
+@import "table.css";
 
 /* Misc */
 html {
@@ -21,7 +22,7 @@ html {
 	--on-accent: white;
 
 	/* Red */
-	--red-rgb: 232, 42, 42;
+	--red-rgb: 255, 64, 64;
 	--red: rgb(var(--red-rgb));
 
 	/* Gray */
@@ -46,6 +47,13 @@ code {
 mark {
 	color: var(--on-accent);
 	background-color: var(--accent);
+}
+
+hr {
+	border: 1px solid var(--gray);
+	border-radius: var(--radius);
+	border-collapse: collapse;
+	width: 100%;
 }
 
 img, video {
