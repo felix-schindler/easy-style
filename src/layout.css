@@ -1,0 +1,23 @@
+/* Header - Main Footer */
+.hmf {
+	margin: 0;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	min-height: 100vh;
+}
+
+.hmf :matches(header, main, footer) {
+	padding: 1em;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+	gap: 1em;
+}
+
+.card {
+	padding: 1em;
+	background-color: rgba(var(--gray-rgb), .2);
+	border-radius: var(--radius);
+}
