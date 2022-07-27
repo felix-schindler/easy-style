@@ -79,6 +79,7 @@
 				<a href="#!" class="active">Active</a>
 				<a href="#buttons">Buttons</a>
 				<a href="#links">Links</a>
+				<a href="#textfields">Text fields</a>
 				<a href="#inputs">Inputs</a>
 				<a href="#!">Overflow</a>
 			</nav>
@@ -174,8 +175,8 @@
 			</table>
 		</div>
 
-		<div id="inputs" class="card">
-			<h1>Inputs</h1>
+		<div id="textfields" class="card">
+			<h1>Text fields</h1>
 			<p>Use <code>button.b</code> for big; <code>button.s</code> for small variant</p>
 			<div>
 				<input type="text" placeholder="Text">
@@ -186,6 +187,16 @@
 				<input class="b" type="text" placeholder="Big">
 				<textarea rows="3" placeholder="Textarea"></textarea>
 			</div>
+
+			<h2>Disabled</h2>
+			<div>
+				<input type="text" placeholder="Disabled" disabled>
+				<textarea rows="3" placeholder="Textarea" disabled></textarea>
+			</div>
+		</div>
+
+		<div id="inputs" class="card">
+			<h1>Inputs</h1>
 
 			<h2>Checkboxes</h2>
 			<div>
@@ -201,15 +212,11 @@
 				<label for="bmw">BMW</label>
 			</div>
 
-			<h2>Disabled</h2>
-			<div>
-				<input type="text" placeholder="Disabled" disabled>
-				<textarea rows="3" placeholder="Textarea" disabled></textarea>
-			</div>
-
 			<h2>Labels</h2>
+			<p>If you don't need a <code>&lt;label&gt;</code>, you can use <code>.label</code> for the same style.</p>
 			<div>
-				<label>Label</label>
+				<label>&lt;label&gt;</label>
+				<span class="label">.label</span>
 			</div>
 		</div>
 	</main>
