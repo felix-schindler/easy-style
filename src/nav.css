@@ -1,3 +1,9 @@
+nav {
+	display: flex;
+	gap: .125em;
+	overflow: scroll;
+}
+
 nav a {
 	border-radius: var(--radius);
 	padding: .5em .75em;
