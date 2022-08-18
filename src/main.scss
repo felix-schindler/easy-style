@@ -3,14 +3,14 @@ Easy Style CSS Framework v0.1.2
 URL: https://github.com/felix-schindler/easy-style
 */
 
-@import "layout.css";
-@import "links.css";
-@import "nav.css";
-@import "buttons.css";
-@import "inputs.css";
-@import "disabled.css";
-@import "table.css";
-@import "typo.css";
+@import "layout.scss";
+@import "links.scss";
+@import "nav.scss";
+@import "buttons.scss";
+@import "inputs.scss";
+@import "disabled.scss";
+@import "table.scss";
+@import "typo.scss";
 
 /* Misc */
 html {
@@ -67,6 +67,10 @@ img, video {
 	background-color: var(--accent);
 }
 
-/* :focus-visible {
-	outline: 2px solid var(--accent);
-} */
+// :focus {
+// 	outline: 0;
+// }
+
+// :focus-visible {
+// 	outline: 2px solid var(--accent);
+// }

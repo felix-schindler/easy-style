@@ -1,14 +1,15 @@
 {
-  "name": "easy-style",
-  "version": "0.1.2",
-  "description": "Easy to use style",
-  "repository": "https://github.com/felix-schindler/easy-style",
-  "author": "Felix <webmaster@schindlerfelix.de>",
-  "license": "MIT",
-  "scripts": {
-    "build": "cleancss -o easy-style.min.css src/main.css"
-  },
-  "devDependencies": {
-    "clean-css-cli": "^4.2.1"
-  }
+	"name": "easy-style",
+	"version": "0.1.2",
+	"description": "Easy to use style",
+	"repository": "https://github.com/felix-schindler/easy-style",
+	"author": "Felix <webmaster@schindlerfelix.de>",
+	"license": "MIT",
+	"scripts": {
+		"build": "sass src/main.scss easy-style.min.css",
+		"watch": "sass --watch src/main.scss easy-style.min.css"
+	},
+	"devDependencies": {
+		"sass": "^1.53.0"
+	}
 }

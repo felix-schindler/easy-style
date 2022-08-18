@@ -1,0 +1,30 @@
+table {
+	&.w {
+		width: 100%;
+	}
+
+	th {
+		text-align: start;
+	}
+
+	th,
+	td {
+		padding: .5em;
+	}
+
+	thead {
+		border-bottom: 1px solid rgba(var(--gray-rgb), .2);
+	}
+
+	tbody {
+		&> tr {
+			&:nth-child(2n) {
+				background-color: rgba(var(--gray-rgb), .2);
+			}
+
+			&:hover {
+				background-color: rgba(var(--gray-rgb), .3);
+			}
+		}
+	}
+}

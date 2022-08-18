@@ -1,0 +1,27 @@
+nav {
+	display: flex;
+	gap: .125em;
+	overflow-x: scroll;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	a {
+		white-space: pre;
+		border-radius: var(--radius);
+		padding: .5em .75em;
+		border-bottom: 3px solid transparent;
+
+		&:hover {
+			text-decoration: none;
+			background-color: rgba(var(--gray-rgb), 0.25);
+		}
+
+		&.active {
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			border-color: var(--accent);
+		}
+	}
+}
