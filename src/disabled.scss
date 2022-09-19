@@ -1,28 +1,25 @@
 /* Global */
-[disabled], :disabled {
+[disabled],
+:disabled {
 	cursor: not-allowed;
 }
 
 
 /* Buttons */
-:where(
-	button,
+:where(button,
 	a[role="button"],
 	input[type="button"],
 	input[type="submit"],
-	input[type="reset"]
-)[disabled] {
+	input[type="reset"])[disabled] {
 	background-color: rgba(var(--accent-rgb), 0.6);
 }
 
 /* Secondary */
-:where(
-	button,
+:where(button,
 	a[role="button"],
 	input[type="button"],
 	input[type="submit"],
-	input[type="reset"]
-).s[disabled] {
+	input[type="reset"]).s[disabled] {
 	opacity: .75;
 	background-color: rgba(var(--gray-rgb), .2);
 }
@@ -34,6 +31,7 @@
 
 
 /* Inputs */
-input[disabled], textarea[disabled] {
+input[disabled],
+textarea[disabled] {
 	background-color: rgba(var(--gray-rgb), 0.2);
 }

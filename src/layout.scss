@@ -6,8 +6,12 @@
 	min-height: 100vh;
 }
 
-.hmf :matches(header, main, footer) {
-	padding: 1em;
+.hmf {
+	&>header,
+	&>main,
+	&>footer {
+		padding: 1em;
+	}
 }
 
 .grid {
