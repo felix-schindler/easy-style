@@ -11,7 +11,7 @@ URL: https://github.com/felix-schindler/easy-style
   min-height: 100vh;
 }
 
-.hmf :matches(header, main, footer) {
+.hmf > header, .hmf > main, .hmf > footer {
   padding: 1em;
 }
 
@@ -68,6 +68,7 @@ a[role=button][disabled]:hover {
 
 nav {
   display: flex;
+  align-items: flex-start;
   gap: 0.125em;
   overflow-x: scroll;
 }
@@ -78,7 +79,6 @@ nav a {
   white-space: pre;
   border-radius: var(--radius);
   padding: 0.5em 0.75em;
-  border-bottom: 3px solid transparent;
 }
 nav a:hover {
   text-decoration: none;
@@ -87,7 +87,7 @@ nav a:hover {
 nav a.active {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  border-color: var(--accent);
+  border-bottom: 3px solid var(--accent);
 }
 
 /* Buttons */
@@ -110,6 +110,7 @@ input[type=file]),
   transition: var(--trans);
   /* Secondary */
   /* Big */
+  /* Reset */
 }
 :where(button,
 a[role=button],
@@ -155,8 +156,8 @@ a[role=button],
 input[type=button],
 input[type=submit],
 input[type=reset],
-input[type=file]).s .s:where(:active),
-:where(input[type=file])::file-selector-button.s .s:where(:active) {
+input[type=file]).s:active,
+:where(input[type=file])::file-selector-button.s:active {
   background-color: rgba(var(--gray-rgb), 0.15);
 }
 :where(button,
@@ -168,15 +169,31 @@ input[type=file]).b,
 :where(input[type=file])::file-selector-button.b {
   padding: 0.75em 1em;
 }
-
-/* Reset */
-:where([type=reset]) {
+:where(button,
+a[role=button],
+input[type=button],
+input[type=submit],
+input[type=reset],
+input[type=file])[type=reset],
+:where(input[type=file])::file-selector-button[type=reset] {
   background-color: var(--red);
 }
-:where([type=reset]):hover {
+:where(button,
+a[role=button],
+input[type=button],
+input[type=submit],
+input[type=reset],
+input[type=file])[type=reset]:not(:active):hover,
+:where(input[type=file])::file-selector-button[type=reset]:not(:active):hover {
   background-color: rgba(var(--red-rgb), 0.9);
 }
-:where([type=reset]):active {
+:where(button,
+a[role=button],
+input[type=button],
+input[type=submit],
+input[type=reset],
+input[type=file])[type=reset]:active,
+:where(input[type=file])::file-selector-button[type=reset]:active {
   background-color: rgba(var(--red-rgb), 0.8);
 }
 
@@ -230,7 +247,8 @@ label, .label {
 }
 
 /* Global */
-[disabled], :disabled {
+[disabled],
+:disabled {
   cursor: not-allowed;
 }
 
@@ -259,7 +277,8 @@ input[type=reset]).s[disabled] {
 }
 
 /* Inputs */
-input[disabled], textarea[disabled] {
+input[disabled],
+textarea[disabled] {
   background-color: rgba(var(--gray-rgb), 0.2);
 }
 
@@ -332,7 +351,8 @@ hr {
   width: 100%;
 }
 
-img, video {
+img,
+video {
   max-width: 100%;
   height: auto;
 }
