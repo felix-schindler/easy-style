@@ -17,14 +17,15 @@
 	border-radius: var(--radius);
 	transition: var(--trans);
 
-	&:not(:active):hover {
-		background-color: rgba(var(--accent-rgb), 0.9);
+	&:not(:active) {
+		&:hover {
+			background-color: rgba(var(--accent-rgb), 0.9);
+		}
 	}
 
 	&:active {
 		background-color: rgba(var(--accent-rgb), 0.8);
 	}
-
 
 	/* Secondary */
 	&.s {
@@ -37,7 +38,7 @@
 			background-color: rgba(var(--gray-rgb), .2);
 		}
 
-		.s:where(:active) {
+		&:active {
 			background-color: rgba(var(--gray-rgb), .15);
 		}
 	}
@@ -47,18 +48,17 @@
 	&.b {
 		padding: .75em 1em;
 	}
-}
 
+	/* Reset */
+	&[type="reset"] {
+		background-color: var(--red);
 
-/* Reset */
-:where([type="reset"]) {
-	background-color: var(--red);
+		&:not(:active):hover {
+			background-color: rgba(var(--red-rgb), 0.9);
+		}
 
-	&:hover {
-		background-color: rgba(var(--red-rgb), 0.9);
-	}
-
-	&:active {
-		background-color: rgba(var(--red-rgb), 0.8);
+		&:active {
+			background-color: rgba(var(--red-rgb), 0.8);
+		}
 	}
 }

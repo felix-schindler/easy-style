@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,7 @@
 			display: inline-block;
 		}
 
-		#inputs > div {
+		#inputs>div {
 			margin-block-end: 1em;
 			display: flex;
 			flex-wrap: wrap;
@@ -20,14 +21,16 @@
 			gap: .25em;
 		}
 
-		#settings > div {
+		#settings>div {
 			display: flex;
 			align-items: center;
 			flex-wrap: wrap;
 			gap: 1em;
 		}
+
 	</style>
 </head>
+
 <body>
 	<h1><mark>Easy</mark> (to use) style</h1>
 
@@ -79,7 +82,6 @@
 				<a href="#!" class="active">Active</a>
 				<a href="#buttons">Buttons</a>
 				<a href="#links">Links</a>
-				<a href="#textfields">Text fields</a>
 				<a href="#inputs">Inputs</a>
 				<a href="#!">Overflow</a>
 			</nav>
@@ -91,7 +93,7 @@
 			<a href="#!">Normal</a>
 			<a href="#!" target="_blank">New Tab</a>
 			<a href="#!" role="button">Button</a>
-			<a href="mailto:someone" role="button" disabled>Button</a>
+			<a href="mailto:someone" role="button" disabled>Mail Button</a>
 			<a href="#!" role="button" target="_blank">New Tab Link-Button</a>
 			<a href="mailto:someone">Mail</a>
 			<a href="tel:number">Phone</a>
@@ -227,9 +229,9 @@
 			const hexArr = hex.match(/.{1,2}/g);
 
 			return [
-					parseInt(hexArr[0], 16),
-					parseInt(hexArr[1], 16),
-					parseInt(hexArr[2], 16)
+				parseInt(hexArr[0], 16),
+				parseInt(hexArr[1], 16),
+				parseInt(hexArr[2], 16)
 			].join(", ");
 		}
 
@@ -244,4 +246,5 @@
 		radius.addEventListener("input", (e) => document.documentElement.style.setProperty('--radius', `${e.target.value}px`));
 	</script>
 </body>
+
 </html>
